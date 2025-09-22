@@ -60,7 +60,7 @@ const Navbar = ({ cartItemsCount }: NavbarProps) => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 hover:scale-105 transition-transform">
             <div className="bg-accent text-accent-foreground px-3 py-1 rounded-lg font-bold text-lg">
-              Lovable Dev
+              FreshCart
             </div>
           </Link>
 
@@ -114,7 +114,7 @@ const Navbar = ({ cartItemsCount }: NavbarProps) => {
                   <DropdownMenuItem
                     key={category}
                     className="hover:bg-muted transition-colors cursor-pointer"
-                    onClick={() => navigate(`/category/${category.toLowerCase()}`)}
+                    onClick={() => navigate(`/category/${category.toLowerCase().replace(/\s+/g, '-')}`)}
                   >
                     {category}
                   </DropdownMenuItem>

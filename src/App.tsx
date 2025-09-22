@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import CartPage from "./pages/CartPage";
+import CategoryPage from "./pages/CategoryPage";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Orders from "./pages/Orders";
@@ -143,6 +144,15 @@ const App = () => {
                       onUpdateQuantity={updateQuantity}
                       onRemoveItem={removeFromCart}
                       onReorderPrevious={reorderPrevious}
+                    />
+                  } 
+                />
+                <Route 
+                  path="/category/:categoryName" 
+                  element={
+                    <CategoryPage
+                      onAddToCart={addToCart}
+                      onQuickAdd={quickAdd}
                     />
                   } 
                 />

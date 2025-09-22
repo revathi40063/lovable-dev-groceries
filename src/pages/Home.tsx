@@ -32,8 +32,8 @@ interface HomeProps {
 
 const Home = ({ onAddToCart, onQuickAdd }: HomeProps) => {
   const handleCategoryClick = (category: Category) => {
-    console.log('Category clicked:', category);
-    // Navigate to category page or filter products
+    const categoryPath = category.name.toLowerCase().replace(/\s+/g, '-');
+    window.location.href = `/category/${categoryPath}`;
   };
 
   return (
